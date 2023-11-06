@@ -1,0 +1,43 @@
+import java.util.*;
+class product{
+    public static void main(String ars[])
+    {
+        Scanner sc=new Scanner(System.in);
+        double price[]={99.90,20.20,6.87,45.50,40.49};
+        int product[]={1,2,3,4,5};
+       System.out.println("n:");
+       int n,id,q;
+       n=sc.nextInt();
+       double totp=0,p;
+       for(int i=0;i<n;i++)
+       {
+           System.out.println("id and quantity"+(i+1)+":");
+           id=sc.nextInt();
+          // System.out.println("quantity"+(i+1)+":");
+           q=sc.nextInt();
+           switch(id)
+           {
+               case 1:
+                   p=99.90;
+                   break;
+               case 2:
+                   p=20.20;
+                   break;
+               case 3:
+                   p=6.87;
+                   break;
+               case 4:
+                   p=45.50;
+                   break;
+               case 5:
+                   p=40.49;
+                   break;
+               default:
+                 p=0;
+                 break;
+           }
+           totp+=p*q;
+       }
+      System.out.println("total retail value of prod. sold:"+totp);
+    }
+}
