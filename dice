@@ -1,0 +1,21 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class dice{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+         System.out.println("enter faces of dice between 1 to 6");
+         int count=0;
+        for(int i=0;i<10;i++)
+        {
+            System.out.println("enter faces of dice for "+(i+1)+ " role");
+            int x=sc.nextInt();
+            int y=sc.nextInt();
+            if(x==y && x>=1 &&x<=6 && y>=1 && x<=6)
+            {
+                count++;
+            }
+        }
+        System.out.println("Successfull attempts:"+count);
+    }
+}
