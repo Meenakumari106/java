@@ -1,0 +1,49 @@
+import java.util.*;
+class duplicates{
+
+public static boolean search(int arr[],int i,int x)
+{
+    for(int j=0;j<i;j++)
+    {
+       if(arr[j]==x)
+         return true;    
+    }
+  return false;
+
+}
+
+public static void main(String args[])
+{
+     Scanner sc=new Scanner(System.in);
+     int arr[]=new int[5];
+    // arr[0]=sc.nextInt();
+     int j=0,c=0;
+     //Queue<Obj> queue = new PriorityQueue<Obj> ();  
+     for(int i=0;i<5;i++)
+     {
+        int x=sc.nextInt();
+        if(search(arr,i,x)!=true) 
+        { 
+          arr[j]=x;
+           //System.out.print(arr[i]+" ");
+          c++;
+         j++;//to enter in sequence in arr
+        }
+         else
+         {
+          System.out.println("duplicate entry");
+        // i--;
+            j--;
+          }
+             
+     }
+       for(int i=0;i<c;i++)
+       {
+         System.out.print(arr[i]+" ");
+       }
+     
+}  
+
+
+
+}
