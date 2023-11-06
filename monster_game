@@ -1,0 +1,82 @@
+import java.util.*;
+
+class monster {
+
+       String name;
+       monster(String name)
+       {
+          this.name=name;
+
+              }  
+
+         void attack()
+         {
+          System.out.println(name+" is Attacking");
+           
+           }
+}
+
+class firemonster extends monster
+{
+      firemonster(String name)
+       {
+           super(name);
+       }
+
+       void attack()
+        {
+           System.out.println(name+" is Fire attacking");
+           }
+
+
+} 
+
+class watermonster extends monster
+{
+      watermonster(String name)
+       {
+           super(name);
+       }
+
+       void attack()
+        {
+           System.out.println(name+" is Water attacking");
+           }
+} 
+
+class stonemonster extends monster
+{
+      stonemonster(String name)
+       {
+           super(name);
+       }
+
+       void attack()
+        {
+           System.out.println(name+" is stone attacking");
+           }
+} 
+
+public class games{
+
+    public static void main( String args[])
+    {
+        firemonster f=new firemonster("black_devil");
+        f.attack();
+        monster m= new monster("new");  
+        m.attack();
+        watermonster w=new watermonster("white_devil");
+        w.attack();
+        stonemonster s=new stonemonster("zonnofia");
+        s.attack();
+        System.out.println("upcasting");
+        monster d=new firemonster("ruby");
+        d.attack();
+ System.out.println("downcasting");
+         watermonster wm=(watermonster) new monster("ruby");
+        wm.attack();
+    
+    }
+    
+    
+    }
