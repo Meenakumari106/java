@@ -1,0 +1,54 @@
+import java.util.*;
+
+class employee{
+
+public static void main(String args[])
+{
+    Scanner sc=new Scanner(System.in);
+     int n;
+    System.out.println("enter no of emp:");
+    n=sc.nextInt();
+    int id[]=new int[n];
+    int age[]=new int[n];
+    double salary[]=new double[n];
+    String name[]=new String[n];
+    String gender[]=new String[n];
+    String designation[]=new String[n];
+    String address[]=new String[n];
+System.out.println("enter "+n+" emp details");
+System.out.println("enter details of emps'('id,name,age,gender,salary,designation,address')':");
+    for(int i=0;i<n;i++)
+    {
+        System.out.println("enter emp  "+(i+1)+" details");
+          System.out.println("id:");
+        id[i]=sc.nextInt();
+        System.out.println("name:");
+        name[i]=sc.next();
+         System.out.println("age:");
+        age[i]=sc.nextInt();
+         System.out.println("gender:");
+        gender[i]=sc.next();
+          System.out.println("salary:");
+        salary[i]=sc.nextDouble();
+         System.out.println("designation:");
+        designation[i]=sc.next();
+         System.out.println("address:");
+        address[i]=sc.next();
+    }
+  System.out.println("enter id to get details:");
+int x=sc.nextInt();
+   for(int i=0;i<n;i++)
+   {
+      if(id[i]==x)
+      {
+        System.out.println( "id:"+id[i]+" "+"name:"+name[i]+" "+"age:"+age[i]+" "+
+                           "gender:"+gender[i]+" "+"salary:"+salary[i]+" "+
+                            "designation:"+designation[i]+" "+
+                             "addres:"+age[i]);
+
+      }
+   }
+
+    
+}
+}
